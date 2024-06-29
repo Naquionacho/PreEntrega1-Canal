@@ -20,8 +20,7 @@ function calcular () {
       alert(`Por favor ingresá un número válido.`)
     } else {
       let pesos = btcEnPesos (btc, btcPrice, tasaCambio);
-      alert(`Tus ${btc} BTC equivalen a $${formatearDecimal(pesos)}`);
-      console.log(`Hola ${nombre}, tus ${btc} BTC equivalen a $${formatearDecimal(pesos)}`)
+      alert(`Hola ${nombre}, tus ${btc} BTC equivalen a $${formatearDecimal(pesos)}`);
     }
   } else if (option === '2') {
       let pesos = parseFloat(prompt(`Ingrese la cantidad de pesos con los que quieres comprar Bitcoin:`));
@@ -29,8 +28,7 @@ function calcular () {
         alert(`Por favor ingrese un número válido.`)
       } else {
         let bitcoin = pesoABtc (pesos, btcPrice, tasaCambio);
-        alert(`La cantidad de Bitcoins que puedes comprar con tus $${formatearDecimal(pesos)} es de ${bitcoin} BTC`); 
-        console.log(`Hola ${nombre}, la cantiddad de Bitcoins que puedes comprar con tus $${formatearDecimal(pesos)} es de ${bitcoin} BTC.`);
+        alert(`${nombre} la cantidad de Bitcoins que puedes comprar con tus $${formatearDecimal(pesos)} es de ${bitcoin} BTC`); 
       }
     } else {
       alert(`Opción no válida, por favor ingrese 1 o 2 para seguir avanzando.`);
@@ -44,7 +42,6 @@ if (nombre == '' || nombre >= 0 || nombre <= 0 ) {
   
   alert(`Bienvenido ${nombre}, a continución eligiras la opción que quieras y si sigues las reglas llegarás a tu resultado.`);
   calcular();
-  
 }
 
 
